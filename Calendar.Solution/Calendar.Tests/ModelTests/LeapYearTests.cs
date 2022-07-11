@@ -19,5 +19,12 @@ namespace Calendar.Tests
       LeapYear testLeapYear = new LeapYear();
       Assert.AreEqual(false, testLeapYear.IsLeapYear(1999));
     }
+
+    [TestMethod]
+    public void IsLeapYear_MultiplesOfOneHundred_False()
+    {
+      LeapYear testLeapYear = new LeapYear();
+      Assert.AreEqual(false, testLeapYear.IsLeapYear(1900));
+    }
   }
 }
